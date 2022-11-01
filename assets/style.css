@@ -221,4 +221,90 @@ main {
 
 /* BENEFICIOS */
 
+/* MERCANCIA */
+.mercancia {
+    margin-top: 115px;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.merch {
+    border-radius: 10px;
+    background: #f1f1;
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+}
+
+
+
+.merch--imgsep {
+    height: 222px;
+    width: 275px;
+    border-radius: 10px;
+    border: 5px solid rebeccapurple;
+}
+
+.merch__info {
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 5px;
+}
+
+.merch__info__top {
+    display: flex;
+    /* justify-content: center; */
+    align-items:baseline;
+    gap: 10px;
+    font-size: 15px;
+}
+
+/* .merch__info__mid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+.merch__info__mid p {
+    font-weight: 700;
+    font-size: 14px;
+}
+.merch__info__bot {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.merch__info__bot p {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    font-weight: 900;
+    font-size: 20px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.merch__info__bot button {
+    border-radius: 10px;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    font-size: 15px;
+    font-weight: 800;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* MERCANCIA */
+
+
 /* MAIN */
