@@ -266,7 +266,7 @@ main {
     /* justify-content: center; */
     align-items:baseline;
     gap: 10px;
-    font-size: 15px;
+    font-size: 13px;
 }
 
 /* .merch__info__mid {
@@ -304,7 +304,87 @@ main {
     cursor: pointer;
 }
 
+
 /* MERCANCIA */
 
+/* CONTACTANOS */
+.contactanos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    margin-top: 150px;
+    margin-bottom: 100px;
+    width: 100%;
+}
+
+.storeimg{
+    border-radius: 10px;
+    width: 50%;
+}
+
+.contactanos__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color:#f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.contactanos__container__local {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactanos__container__local--p {
+    display: flex;
+}
+
+/* CONTACTANOS */
+
+/* FOOTER */
+.footer {
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    box-shadow: rgb(139, 11, 75) 0px 8px 24px;
+    gap: 20px;
+}
+
+.footer__redes-sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__redes-sociales__iconos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__nav{
+    display: flex;
+    gap: 20px;
+}
+
+.footer__nav--link {
+    color: black;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+
+/* FOOTER */
 
 /* MAIN */
