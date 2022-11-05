@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="../assets/style.css">
     <link rel="stylesheet" href="../assets/register_&_login.css">
     <link rel="stylesheet" href="../assets/animations.css">
+    <link rel="stylesheet" href="../assets/mediaqueries.css">
+    <link rel="shortcut icon" href="../assets/images/1868842.png" type="image/x-icon" />
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <img src="../assets/images/1868842.png" alt="Logo 8-Bits Store" class="header__img--logo-store">
         <nav class="header__navbar">
-            <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
+            <label for="toggle-menu" class="header__navbar--hamburger"><i class="fa-solid fa-bars"></i></label>
             <input type="checkbox" id="toggle-menu">
             <ul class="header__navbar__navbar-list">
                 <li><a href="../index.html">Home</a></li>
@@ -24,15 +26,17 @@
                 <li><a href="../index.html">Contactanos</a></li>
             </ul>
            
-           </nav>
+           
         
-
+            <label for="user-access" class="header--access"><i class="fa-solid fa-user"></i></label>
+            <input type="checkbox" id="user-access">
             <div class="header__navbar__login">
             <p><a href="../pages/login.html">Iniciar Sesion</a></p>
             <!-- <p>/</p> -->
             <p><a href="../pages/register.html">Registrate</a></p>
             
-            </div> 
+            </div>
+        </nav> 
             
     </header>
     <!-- HEADER -->
@@ -59,20 +63,12 @@
         <div class="footer__redes-sociales">
             <h2>Redes Sociales</h2>
             <div class="footer_redes-sociales__iconos">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-twitch"></i>
+            <i class="fa-brands fa-instagram icon"></i>
+            <i class="fa-brands fa-youtube icon"></i>
+            <i class="fa-brands fa-twitter icon"></i>
+            <i class="fa-brands fa-twitch icon"></i>
             </div>
         </div>
-
-        <ul class="footer__nav">
-            <li><a href="#" class="footer__nav--link">Términos de Uso</a></li>
-            <li><a href="#" class="footer__nav--link">Trabajá con Nosotros</a></li>
-            <li><a href="#" class="footer__nav--link">Devoluciones y reemplazos</a></li>
-            <li><a href="#" class="footer__nav--link">Ayuda</a></li>
-            <li><a href="#" class="footer__nav--link">Politicas de Privacidad</a></li>
-        </ul>
     </footer>
     <!-- FOOTER -->
     

@@ -7,7 +7,7 @@
     flex-direction: column;
     margin: 130px 0px;
     gap: 10px;
-    width: 420px;
+    width: 40%;
     height: 400px;
     border-radius: 10px;
     background: #1f1f1f;
@@ -54,7 +54,7 @@
     flex-direction: column;
     margin: 130px 0px;
     gap: 10px;
-    width: 400px;
+    width: 40%;
     height: 360px;
     border-radius: 10px;
     background: #1f1f1f;

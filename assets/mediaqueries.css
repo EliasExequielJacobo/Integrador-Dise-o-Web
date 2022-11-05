@@ -1,4 +1,70 @@
 @media (max-width: 992px) {
+    
+    .header{
+        width: 100%;
+    }
+    .header__navbar__login {
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        width: 50%;
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        border-radius: 0px 0px 10px 10px;
+        padding: 30px 35px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        z-index: 2;
+        /* transition: all 0.4s ease-out; */
+    }
+
+    .header--access {
+        display: flex;
+        cursor: pointer;
+        /* order: 2; */
+    }
+
+    #user-access:checked + .header__navbar__login {
+        transform: translateX(0%);
+        /* transition: all 0.4s ease-in; */
+    }
+
+    .header__navbar{
+        gap: 10px;
+    }
+
+    .header__navbar__navbar-list {
+        background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+        width: 50%;
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        border-radius: 0px 0px 10px 10px;
+        padding: 30px 35px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        z-index: 2;
+        /* transition: all 0.4s ease-out; */
+    }
+
+    .header__navbar--hamburger {
+        display: flex;
+        cursor: pointer;
+        order: 2;
+    }
+
+    #toggle-menu:checked + .header__navbar__navbar-list {
+        transform: translateX(0%);
+        /* transition: all 0.4s ease-in; */
+    }
+    
     .hero{
         text-align: center;
         width: 100%;
@@ -35,9 +101,152 @@
     .contactanos__container {
         justify-content: unset;
         flex-direction: column;
-        width: 50%;
+        width: 90%;
         align-items: center;
         justify-content: center;
         text-align: center;
+    }
+
+    .footer {
+        margin: auto;
+    }
+
+    .footer__redes-sociales {
+        width: 90%;
+    }
+
+    /* LOGIN */
+
+    .form__container--login {
+        width: 50%;
+    }
+
+    .form__container--login h1 {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .form__input {
+        padding: 10px
+    }
+
+    /* LOGIN */
+
+    /* REGISTER */
+
+    
+    .form__container h1 {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    /* REGISTER */
+
+    
+}
+
+@media (max-width: 768px){
+    /* REGISTER */
+    .form__container {
+        width: 50%;
+    }
+    /* REGISTER */
+}
+
+
+@media (max-width: 576px) {
+
+    .hero{
+        text-align: center;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__portada__user_access {
+        gap: 8px;
+    }
+
+    .hero__portada__user_access--a {
+        padding: 8px 0px;
+        font-size: 10px;
+    }
+
+    .hero__info h1 {
+        
+        font-size: 30px;
+    } 
+
+    .hero__info p{
+        font-size: 13px;
+        
+    }
+
+    .contactanos__container {
+        justify-content: unset;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* LOGIN */
+
+    .form__container--login {
+        width: 70%;
+    }
+
+    /* LOGIN */
+
+    /* REGISTER */
+
+    .form__container {
+        width: 70%;
+    }
+    
+
+    /* REGISTER */
+}
+
+@media (max-width: 320px) {
+    .benefit__container {
+        width: 90%;
+    }
+
+    .benefit__container_cards--atencion_cliente {
+        font-size: 14px;
+    }
+
+    .benefit__container_cards--descuento {
+        font-size: 13px;
+    }
+
+    .product__container__card {
+        width: 90%;
+    }
+
+    .merch--imgsep {
+        width: 90%;
+    }
+
+    .product__container__card__info__top {
+        font-size: 12px;
+    }
+
+    .product__container__card__info__mid p {
+        font-size: 12px;
+    }
+
+    .product__container__card__info__bot__price {
+        font-size: 18px;
+    }
+
+    .product__container__card__info__bot--btnadd {
+        font-size: 13px;
     }
 }
