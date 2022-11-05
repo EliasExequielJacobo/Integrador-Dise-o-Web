@@ -35,7 +35,7 @@
 }
 
 .form__btn{
-  background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+  background: #333399;
   border-radius: 10px;
   border: 1px solid black;
   padding: 10px 10px;
@@ -44,6 +44,7 @@
   color: black;
   font-weight: 500;
   margin-top: 15px;
+  transition: all 1s;
 }
 
 .form__container--login {

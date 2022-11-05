@@ -1,0 +1,23 @@
+.hero__portada__user_access--a:hover {
+    background: royalblue;
+    transition: all 1s;
+}
+
+.benefit__container_cards:hover {
+    transition: all 1s;
+    transform: scale(1.1);
+}
+
+
+
+.product__container__card:hover {
+    transition: all 1s;
+    transform: scale(1.05);
+}
+
+.product__container__card__info__bot--btnadd:hover,
+.form__btn:hover {
+    background: royalblue;
+    transition: all 1s;
+}
+

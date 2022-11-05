@@ -18,6 +18,11 @@
     font-family: "Poppins", "sans-serif";
 }
 
+html {
+    scroll-padding-top: 130px;
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -35,10 +40,11 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 65px;
-    /* padding: 0px 25px 0px 25px; */
+    padding: 0px 35px;
     position: fixed;
     top: 0;
     box-shadow: rgb(139, 11, 75) 0px 8px 24px;
+    z-index: 1;
 }
 
 .header__img--logo-store {
@@ -51,11 +57,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* gap: 225px; */
 } 
 
-/* .header__navbar {
-    gap: 150px;
-} */
+.header__navbar i {
+    font-size: 36px;
+    display: none;
+}
+
+#toggle-menu{
+    display: none;
+}
 
 .header__navbar__navbar-list {
     gap: 35px;
@@ -63,11 +75,11 @@ body {
 
 .header__navbar__navbar-list a {
     color: black;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 900;
 }
 
-.header_navbar_login {
+.header__navbar__login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,20 +87,13 @@ body {
     padding: 2px 8px;
 }
 
-.header_navbar_login a {
+.header__navbar__login a {
     color: black;
     font-size: 15px;
     font-weight: 800;
 }
 
-.cart-icon {
-    border: 1px solid black;
-    border-radius: 1rem;
-    padding: 12px 16px;
-    margin-top: 3px;
-    height: 40px;
-    cursor: pointer;
-}
+
 
 /* HEADER */
 
@@ -107,8 +112,9 @@ main {
 }
 
 .hero {
-    margin-top: 115px;
-    padding: 20px;
+    margin-top: 65px;
+    margin-bottom: 110px;
+    /* padding: 20px; */
     max-width: 1200px;
     display: flex;
     justify-content: center;
@@ -140,20 +146,21 @@ main {
     text-align:left;
 }
 
-.hero__portada--user-access {
+.hero__portada__user_access {
     display: flex;
     gap: 15px;
 }
 
-.hero__portada--user-access a {
+.hero__portada__user_access--a {
     color: whitesmoke;
-    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
-    width: 26%;
+    background: #333399;
+    width: 120px;
     padding: 8px 0px;
     border-radius: 1rem;
     font-size: 15px;
     text-align: center;
     font-weight: 600;
+    transition: all 1s;
 }
 
 .hero__hero-container{
@@ -169,12 +176,15 @@ main {
 /* BENEFICIOS */
 
 .benefits {
-    padding: 70px;
+    /* padding-top: 145px; */
     max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 110px;
+    margin-top: 115px;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 110px;
 }
    
 
@@ -186,6 +196,7 @@ main {
     width: 90%;
     padding: 10px;
     gap: 30px;
+    flex-wrap: wrap;
 }
 
 .benefit__container_cards {
@@ -199,6 +210,7 @@ main {
     padding: 10px;
     height: 325px;
     width: 300px;
+    transition: all 1s;
 }
 
 .benefit__container_cards img {
@@ -222,9 +234,10 @@ main {
 /* BENEFICIOS */
 
 /* MERCANCIA */
-.mercancia {
+.product {
     margin-top: 115px;
-    padding: 20px;
+    margin-bottom: 110px;
+    /* padding: 20px; */
     max-width: 1200px;
     display: flex;
     justify-content: center;
@@ -233,7 +246,17 @@ main {
     gap: 15px;
 }
 
-.merch {
+.product__container {
+    display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 40px 0;
+  max-width: 1200px;
+}
+
+.product__container__card {
     border-radius: 10px;
     background: #f1f1;
     padding: 15px 10px 10px 10px;
@@ -242,6 +265,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 13px;
+    transition: all 1s;
 }
 
 
@@ -253,7 +277,7 @@ main {
     border: 5px solid rebeccapurple;
 }
 
-.merch__info {
+.product__container__card__info {
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
@@ -261,7 +285,7 @@ main {
     gap: 5px;
 }
 
-.merch__info__top {
+.product__container__card__info__top {
     display: flex;
     /* justify-content: center; */
     align-items:baseline;
@@ -275,18 +299,18 @@ main {
     justify-content: center;
 } */
 
-.merch__info__mid p {
+.product__container__card__info__mid p {
     font-weight: 700;
     font-size: 14px;
 }
-.merch__info__bot {
+.product__container__card__info__bot {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
 }
 
-.merch__info__bot p {
+.product__container__card__info__bot__price {
     background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
     font-weight: 900;
     font-size: 20px;
@@ -295,13 +319,15 @@ main {
     background-clip: text;
 }
 
-.merch__info__bot button {
+.product__container__card__info__bot--btnadd {
     border-radius: 10px;
-    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    background: #333399;
     font-size: 15px;
     font-weight: 800;
     padding: 5px 10px;
     cursor: pointer;
+    transition: all 1s;
+    color: whitesmoke;
 }
 
 
@@ -314,8 +340,8 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 60px;
-    margin-top: 150px;
-    margin-bottom: 100px;
+    margin-top: 115px;
+    margin-bottom: 110px;
     width: 100%;
 }
 
@@ -373,6 +399,10 @@ main {
     justify-content: center;
 }
 
+.icon {
+    cursor: pointer;
+}
+
 .footer__nav{
     display: flex;
     gap: 20px;
@@ -381,7 +411,7 @@ main {
 .footer__nav--link {
     color: black;
     font-weight: 900;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 

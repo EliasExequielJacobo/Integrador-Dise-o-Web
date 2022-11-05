@@ -7,28 +7,35 @@
     <title>8-bits Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/animations.css">
+    <link rel="stylesheet" href="./assets/mediaqueries.css">
+    <link rel="shortcut icon" href="./assets/images/1868842.png" type="image/x-icon" />
 </head>
 <body>
     <!-- HEADER -->
     <header class="header">
         <img src="./assets/images/1868842.png" alt="Logo 8-Bits Store" class="header__img--logo-store">
         <nav class="header__navbar">
+            <label for="toggle-menu"><i class="fa-solid fa-bars"></i></label>
+            <input type="checkbox" id="toggle-menu">
+
             <ul class="header__navbar__navbar-list">
                 <li><a href="#">Home</a></li>
                 <li><a href="#beneficios">Beneficios</a></li>
-                <li><a href="">Mercancia</a></li>
-                <li><a href="">Contactanos</a></li>
+                <li><a href="#producto">Productos</a></li>
+                <li><a href="#contactanos">Contactanos</a></li>
             </ul>
            
-           
-        </nav>
+           </nav>
+        
 
-            <div class="header_navbar_login">
+            <div class="header__navbar__login">
             <p><a href="./pages/login.html">Iniciar Sesion</a></p>
             <!-- <p>/</p> -->
             <p><a href="./pages/register.html">Registrate</a></p>
-            <i class="fa-sharp fa-solid fa-cart-shopping cart-icon"></i>
-            </div> 
+            </div>
+            
+                    
             
     </header>
     <!-- HEADER -->
@@ -46,9 +53,9 @@
                         beneficios.
                     </p>
 
-                    <div class="hero__portada--user-access">
-                    <a href="#">Iniciar Sesion</a>
-                    <a href="#">Registrate</a>
+                    <div class="hero__portada__user_access">
+                    <a href="./pages/login.html" class="hero__portada__user_access--a">Iniciar Sesion</a>
+                    <a href="./pages/register.html" class="hero__portada__user_access--a">Registrate</a>
                     </div>
 
                 </div>
@@ -61,6 +68,7 @@
 
             <!-- BENEFICIOS -->
             <section class="benefits" id="beneficios">
+                <h2>Beneficios</h2>
                 <div class="benefit__container">
                     <div class="benefit__container_cards">
                        <img src="./assets/images/9528452.png" alt="atencion_al_cliente">
@@ -103,33 +111,35 @@
 
             <!-- MERCANCIA -->
 
-            <section class="mercancia" id="mercancia">
+            <section class="product" id="producto">
+                <h2>Productos</h2>
 
-                <div class="merch">
+             <div class="product__container">
+                <div class="product__container__card">
 
-                    
+                     
                     <img src="./assets/images/Sephiroth.jpg" alt="Sephiroth Funko" class="merch--imgsep">
                     
 
-                    <div class="merch__info">
-                        <div class="merch__info__top">
+                    <div class="product__container__card__info">
+                        <div class="product__container__card__info__top">
                             <h3>Sephiroth Funko Pop</h3>
                             <p>Square Enix</p>
                         </div>
 
-                        <div class="merch__info__mid">
+                        <div class="product__container__card__info__mid">
                             <p>Que no te engañe su aspecto bonito</p>
                         </div>
 
-                        <div class="merch__info__bot">
+                        <div class="product__container__card__info__bot">
                             
-                            <div class="merch__info__bot__price">
+                            <div class="product__container__card__info__bot__price">
                             <p>$250</p>
                             </div>
 
-                            <div class="merch__info_bot__addbtn">
-                            <button>Agregar</button>
-                            </div>
+                            
+                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            
 
                         </div>
                     </div>
@@ -137,31 +147,31 @@
 
                 </div>
 
-                <div class="merch">
+                <div class="product__container__card">
 
                     
                     <img src="./assets/images/Dark souls.jpg" alt="Sephiroth Funko" class="merch--imgsep">
                     
 
-                    <div class="merch__info">
-                        <div class="merch__info__top">
+                    <div class="product__container__card__info">
+                        <div class="product__container__card__info__top">
                             <h3>Dark Souls 3 Colec.Edit.</h3>
                             <p>Bandai Namco</p>
                         </div>
 
-                        <div class="merch__info__mid">
+                        <div class="product__container__card__info__mid">
                             <p>¿Estas listo para el desafio?</p>
                         </div>
 
-                        <div class="merch__info__bot">
+                        <div class="product__container__card__info__bot">
                             
-                            <div class="merch__info__bot__price">
+                            <div class="product__container__card__info__bot__price">
                             <p>$500</p>
                             </div>
 
-                            <div class="merch__info_bot__addbtn">
-                            <button>Agregar</button>
-                            </div>
+                            
+                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            
 
                         </div>
                     </div>
@@ -169,31 +179,31 @@
                     
                 </div>
 
-                <div class="merch">
+                <div class="product__container__card">
 
                     
                     <img src="./assets/images/MhW.jpg" alt="Sephiroth Funko" class="merch--imgsep">
                     
 
-                    <div class="merch__info">
-                        <div class="merch__info__top">
+                    <div class="product__container__card__info">
+                        <div class="product__container__card__info__top">
                             <h3>Consola xbox one/ps4</h3>
                             <p>Capcom</p>
                         </div>
 
-                        <div class="merch__info__mid">
+                        <div class="product__container__card__info__mid">
                             <p>Elige una de las 2 consolas edicion Mhw</p>
                         </div>
 
-                        <div class="merch__info__bot">
+                        <div class="product__container__card__info__bot">
                             
-                            <div class="merch__info__bot__price">
+                            <div class="product__container__card__info__bot__price">
                             <p>$750</p>
                             </div>
 
-                            <div class="merch__info_bot__addbtn">
-                            <button>Agregar</button>
-                            </div>
+                            
+                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            
 
                         </div>
                     </div>
@@ -201,31 +211,31 @@
                     
                 </div>
 
-                <div class="merch">
+                <div class="product__container__card">
 
                     
                     <img src="./assets/images/Gift Card.jpg" alt="Sephiroth Funko" class="merch--imgsep">
                     
 
-                    <div class="merch__info">
-                        <div class="merch__info__top">
+                    <div class="product__container__card__info">
+                        <div class="product__container__card__info__top">
                             <h3>Tarjetas de regalo varias</h3>
                             <p>Consolas/PC</p>
                         </div>
 
-                        <div class="merch__info__mid">
+                        <div class="product__container__card__info__mid">
                             <p>Tarjetas de regalo surtidas</p>
                         </div>
 
-                        <div class="merch__info__bot">
+                        <div class="product__container__card__info__bot">
                             
-                            <div class="merch__info__bot__price">
+                            <div class="product__container__card__info__bot__price">
                             <p>$350</p>
                             </div>
 
-                            <div class="merch__info_bot__addbtn">
-                            <button>Agregar</button>
-                            </div>
+                            
+                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            
 
                         </div>
                     </div>
@@ -233,31 +243,31 @@
                     
                 </div>
 
-                <div class="merch">
+                <div class="product__container__card">
 
                     
                     <img src="./assets/images/FF colec.jpg" alt="Sephiroth Funko" class="merch--imgsep">
                     
 
-                    <div class="merch__info">
-                        <div class="merch__info__top">
+                    <div class="product__container__card__info">
+                        <div class="product__container__card__info__top">
                             <h3>Colleccion FF 1-15</h3>
                             <p>Square Enix</p>
                         </div>
 
-                        <div class="merch__info__mid">
+                        <div class="product__container__card__info__mid">
                             <p>Vive toda las saga Final Fantasy del 1-15</p>
                         </div>
 
-                        <div class="merch__info__bot">
+                        <div class="product__container__card__info__bot">
                             
-                            <div class="merch__info__bot__price">
+                            <div class="product__container__card__info__bot__price">
                             <p>$3000</p>
                             </div>
 
-                            <div class="merch__info_bot__addbtn">
-                            <button>Agregar</button>
-                            </div>
+                            
+                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            
 
                         </div>
                     </div>
@@ -265,43 +275,43 @@
                     
                 </div>
 
-                <div class="merch">
+                <div class="product__container__card">
 
                     
                     <img src="./assets/images/Silent Hill.jpg" alt="Sephiroth Funko" class="merch--imgsep">
                     
 
-                    <div class="merch__info">
-                        <div class="merch__info__top">
+                    <div class="product__container__card__info">
+                        <div class="product__container__card__info__top">
                             <h3>Silent Hill Coleccion</h3>
                             <p>Konami</p>
                         </div>
 
-                        <div class="merch__info__mid">
+                        <div class="product__container__card__info__mid">
                             <p>Explora todo Silent Hill del 1-4 y origins</p>
                         </div>
 
-                        <div class="merch__info__bot">
+                        <div class="product__container__card__info__bot">
                             
-                            <div class="merch__info__bot__price">
+                            <div class="product__container__card__info__bot__price">
                             <p>$2500</p>
                             </div>
 
-                            <div class="merch__info_bot__addbtn">
-                            <button>Agregar</button>
-                            </div>
+                            
+                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            
 
                         </div>
                     </div>
 
-                    
-                </div>
+                </div>    
+             </div>
 
             </section>
             <!-- MERCANCIA -->
 
             <!-- CONTACTANOS -->
-            <section class="contactanos">
+            <section class="contactanos" id="contactanos">
                 <h2>Contactanos</h2>
 
                 <div class="contactanos__container">
@@ -310,14 +320,14 @@
                         <h4>Mexico, Ciudad de Mexico</h4>
                         <p><i class="fa-solid fa-location-dot"></i> Calle ficticia 1234</p>
                         <p><i class="fa-solid fa-phone"></i> 1235678</p>
-                        <p><i class="fa-solid fa-envelope"></i> 8bitsadmin@gamil.com</p>
+                        <p><i class="fa-solid fa-envelope"></i> 8bitsadmin@gmail.com</p>
                     </div>
 
                     <div class="contactanos__container__local">
                         <h4>Dueño: Max Powers</h4>
                         <p><i class="fa-solid fa-location-dot"></i> Calle ficticia 1234</p>
                         <p><i class="fa-solid fa-phone"></i> 9101112</p>
-                        <p><i class="fa-solid fa-envelope"></i> maxpowers8bit@gamil.com</p>
+                        <p><i class="fa-solid fa-envelope"></i> maxpowers8bit@gmail.com</p>
                     </div>
 
                     
@@ -341,10 +351,10 @@
         <div class="footer__redes-sociales">
             <h2>Redes Sociales</h2>
             <div class="footer_redes-sociales__iconos">
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-twitch"></i>
+            <i class="fa-brands fa-instagram icon"></i>
+            <i class="fa-brands fa-youtube icon"></i>
+            <i class="fa-brands fa-twitter icon"></i>
+            <i class="fa-brands fa-twitch icon"></i>
             </div>
         </div>
 
