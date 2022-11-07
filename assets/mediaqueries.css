@@ -186,6 +186,18 @@
         
     }
 
+    .benefits h2 {
+        font-size: 18px;
+    }
+
+    .product h2 {
+        font-size: 18px;
+    }
+
+    .contactanos h2 {
+        font-size: 18px;
+    }
+
     .contactanos__container {
         justify-content: unset;
         flex-direction: column;
@@ -194,6 +206,11 @@
         justify-content: center;
         text-align: center;
     }
+
+    .contactanos__container h4, p {
+        font-size: 15px;
+    }
+
 
     /* LOGIN */
 
@@ -249,4 +266,5 @@
     .product__container__card__info__bot--btnadd {
         font-size: 13px;
     }
+    
 }
