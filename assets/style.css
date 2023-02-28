@@ -40,7 +40,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 65px;
-    padding: 0px 10px;
+    padding: 0px 20px;
     position: fixed;
     top: 0;
     /* box-shadow: rgb(139, 11, 75) 0px 8px 24px; */
@@ -52,7 +52,13 @@ body {
     padding: 2px 8px;
 }
 
-.header__navbar,
+.header__navbar {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
 .header__navbar__navbar-list {
     display: flex;
     justify-content: center;
@@ -103,6 +109,42 @@ body {
 }
 
 
+.openMenu {
+    display: flex;
+}
+/* Carrito */
+
+.cartLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cartToggle {
+    display: none;
+}
+
+.carrito { 
+  position: absolute;
+  top: 60px;
+  right: 0;
+  padding: 30px 20px;
+  background: var(--secondbackground);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: calc(100vh - 40px);
+  z-index: 2;
+  overflow-y: scroll;
+  display: none;
+  border-left: 1px solid var(--background);
+}
+
+.carrito::-webkit-scrollbar {
+    display: none;
+}
+
+/* Carrito */
 
 /* HEADER */
 
@@ -242,10 +284,13 @@ main {
 
 /* BENEFICIOS */
 
+
 /* MERCANCIA */
 .product {
     margin-top: 115px;
     margin-bottom: 110px;
+    display: flex;
+    flex-direction: column;
     /* padding: 20px; */
     max-width: 1200px;
     display: flex;
@@ -255,8 +300,38 @@ main {
     gap: 15px;
 }
 
+.product h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.category {
+    border-radius: 10px;
+    width: 85px;
+    height: 45px;
+    background-color: #333399;
+    color: white;
+    font-weight: 900;
+    font-size: small;
+    cursor: pointer;
+}
+
+.act {
+    background:#c471ed;
+    color: white;
+    border: 1px solid var(--background);
+    transition: all 0.3s ease;
+  }
+
 .product__container {
-    display: flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;

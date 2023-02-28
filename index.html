@@ -35,7 +35,41 @@
             </div>
 
         </nav>
-                    
+
+        <!-- carrito  -->
+        <label for="cartToggle" class="cartLabel">
+            <i class="fa-solid fa-cart-shopping"></i>
+        </label>
+        <input type="checkbox" id="cartToggle" />
+       
+        <div class="carrito">
+            <!-- <h2>Productos comprados</h2> -->
+            <div class="prodContainer">
+            <!-- <p class="msgVacio">Carrito vacio</p> -->
+            <!-- Productos  -->
+            <!-- <div class="productCard">
+            <img src="/assets/img/producto1.png" alt="pizzamuzza" />
+            <div class="productInfo">
+                <h3 class="productName">Pizza de muzza</h3>
+                <p class="prodcutPriceTitle">Precio:</p>
+                <span class="productPrice">$300</span>
+            </div>
+            <div class="productCuantity">
+                <span class="Number resta">-</span>
+                <span class="Number">1</span>
+                <span class="Number sum">+</span>
+            </div>
+            </div> -->
+        </div>
+            
+            <span class="dividerLine"></span>
+            
+        <div class="total"></div>
+            
+            <button class="btnComprar">Comprar</button>
+            <button class="btnBorrar">Borrar</button>
+        </div>
+      <!-- -----------------------------  -->
             
     </header>
     <!-- HEADER -->
@@ -114,8 +148,19 @@
             <section class="product" id="producto">
                 <h2>Productos</h2>
 
+                <!-- categoria -->
+                <div class="categories">
+                <button class="category act">Todos</button>
+                <button class="category" data-category="barato">Barato</button>
+                <button class="category" data-category="accesible">Accesible</button>
+                <button class="category" data-category="caro">Caro</button>
+                </div>
+
+
              <div class="product__container">
-                <div class="product__container__card">
+
+                
+                <!-- <div class="product__container__card">
 
                      
                     <img src="./assets/images/Sephiroth.jpg" alt="Sephiroth Funko" class="merch--imgsep">
@@ -138,7 +183,7 @@
                             </div>
 
                             
-                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            <button class="product__container__card__info__bot--btnadd">Comprar</button>
                             
 
                         </div>
@@ -170,7 +215,7 @@
                             </div>
 
                             
-                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            <button class="product__container__card__info__bot--btnadd">Comprar</button>
                             
 
                         </div>
@@ -202,7 +247,7 @@
                             </div>
 
                             
-                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            <button class="product__container__card__info__bot--btnadd">Comprar</button>
                             
 
                         </div>
@@ -234,7 +279,7 @@
                             </div>
 
                             
-                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            <button class="product__container__card__info__bot--btnadd">Comprar</button>
                             
 
                         </div>
@@ -266,7 +311,7 @@
                             </div>
 
                             
-                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            <button class="product__container__card__info__bot--btnadd">Comprar</button>
                             
 
                         </div>
@@ -298,13 +343,13 @@
                             </div>
 
                             
-                            <a href="#" class="product__container__card__info__bot--btnadd">Comprar</a>
+                            <button class="product__container__card__info__bot--btnadd">Comprar</button>
                             
 
                         </div>
                     </div>
 
-                </div>    
+                </div> -->    
              </div>
 
             </section>
@@ -359,7 +404,8 @@
         </div>
     </footer>
     <!-- FOOTER -->
-
-
+<div class="modal-msg"></div>
+<script src="./assets/JS/data.js"></script>
+<script src="./assets/JS/index.js"></script>
 </body>
 </html>
