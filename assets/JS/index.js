@@ -129,9 +129,65 @@ const renderMercanciaTodo = (index = 0) => {
 
 const toggleMenu = () => {
     barsMenu.classList.toggle("openMenu");
+    if (signIn.classList.contains("openMenu")){
+      signIn.classList.remove("openMenu");
+      return;
+    }
+
+    if (contenCarrito.classList.contains("openCart")){
+      contenCarrito.classList.remove("openCart")
+      return;
+    }
+
 };
 
 
+const toggleSignIn = () =>{
+  signIn.classList.toggle("openMenu");
+  if (barsMenu.classList.contains("openMenu")){
+    barsMenu.classList.remove("openMenu");
+    return;
+  }
+
+  if (contenCarrito.classList.contains("openCart")){
+    contenCarrito.classList.remove("openCart")
+    return;
+  }
+};
+
+
+
+const toggleCart = () => {
+  contenCarrito.classList.toggle ("openCart");
+  if (barsMenu.classList.contains("openMenu")){
+    barsMenu.classList.remove("openMenu");
+    return;
+  }
+
+  if (signIn.classList.contains("openMenu")){
+    signIn.classList.remove("openMenu");
+    return;
+  }
+};
+
+const cerrar = (e) => {
+  if(!e.target.classList.contains("navbar-link")){
+    return;
+  }
+
+  barsMenu.classList.remove("openMenu")
+};
+
+
+const scrollClose  = () => {
+  if (!barsMenu.classList.contains("openMenu") && !contenCarrito.classList.contains("openCart") && !signIn.classList.contains("openMenu")) {
+    return;
+  }
+
+  barsMenu.classList.remove("openMenu");
+  contenCarrito.classList.remove("openCart");
+  signIn.classList.remove("openMenu");
+};
 
 // ----------------------------
 
@@ -139,6 +195,10 @@ const init = () => {
     rendProd();
     categories.addEventListener("click", filterActive);
     burger.addEventListener("click", toggleMenu);
+    userAcces.addEventListener("click", toggleSignIn);
+    cart.addEventListener("click", toggleCart);
+    barsMenu.addEventListener("click", cerrar);
+    window.addEventListener("scroll", scrollClose);
 };
 
 init();
