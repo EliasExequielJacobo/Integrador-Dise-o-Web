@@ -128,7 +128,7 @@ body {
   position: absolute;
   top: 65px;
   right: 0;
-  padding: 30px 30px;
+  padding: 30px 90px;
   background: black;
   display: flex;
   flex-direction: column;
@@ -248,10 +248,13 @@ body {
 
 .total {
   display: flex;
-  align-self: flex-end
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
 }
 
-.total p { 
+.total p, span {
+  color: white;   
   font-size: 20px;
   font-weight: 800;
 }
@@ -302,6 +305,20 @@ body {
 
 
 /* Carrito */
+
+
+/* Disabled*/
+
+
+.disabled {
+    cursor: not-allowed;
+    background-color:grey;
+    border: none;
+}
+
+
+/* Disabled */
+
 
 /* HEADER */
 
@@ -640,8 +657,27 @@ main {
     cursor: pointer;
 }
 
+.modal-msg {
+    display: flex;
+    padding: 5px 0px;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    color: var black;
+    background: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    transform: translateY(200%);
+    font-weight: 800;
+    z-index: 2;
+}
 
-
+.modalActiv {
+    transform: translateY(0);
+    transition: all 0.3s ease-in;
+}  
 
 /* FOOTER */
 
