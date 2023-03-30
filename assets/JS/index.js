@@ -303,14 +303,14 @@ const crearProductoCarrito = (product) => {
 
 
 const handlerMinusBtnEvent = (id) =>{
-  const existingCartProduct = cart.find ((item) =>{
+  const existingCartProduct = carrito.find ((item) =>{
     return item.id === id;
   });
   
   if (existingCartProduct.quantity === 1) {
 
     if (window.confirm("¿Desea eliminar este producto")) {
-      eliminarProductoDelCarrito (existingProduct);
+      eliminarProductoDelCarrito (existingCartProduct);
     }
     return;
   }
@@ -320,7 +320,7 @@ const handlerMinusBtnEvent = (id) =>{
 };
 
 const handlerPlusBtnEvent = (id) =>{
-  const existingCartProduct = cart.find ((item) =>{
+  const existingCartProduct = carrito.find ((item) =>{
     return item.id === id;
   });
 
@@ -328,12 +328,12 @@ const handlerPlusBtnEvent = (id) =>{
 }
 
 const eliminarProductoDelCarrito = (existingProduct) =>{
-  cart = cart.filter ((product)=> product.id !== existingProduct.id);
+  carrito = carrito.filter ((product)=> product.id !== existingProduct.id);
       checkCart();
 };
 
 const substractProductUnit = (existingProduct) => {
-  cart = cart.map ((product) =>{
+  carrito = carrito.map ((product) =>{
     return product.id === existingProduct.id ? {...product, quantity: Number(product.quantity) -1} :
     product;
   });
@@ -351,21 +351,26 @@ const controlDeQuantity = (e) =>{
 };
 
 
-// const vaciarCarrito = () =>{
-//   carrito = [];
-//   checkCart;
-// };
+const vaciarCarrito = () =>{
+  carrito = [];
+  checkCart();
+};
 
-// const confirmarVaciarCarrito = (confirmMsg) =>{
-//   if (!carrito.length) return;
-//   if (window.confirm(confirmMsg)) {
-//     vaciarCarrito;
-//   };
-// };
+const confirmarVaciarCarrito = (confirmMsg, successMsg) =>{
+  if (!carrito.length) return;
+  if (window.confirm(confirmMsg)) {
+    vaciarCarrito ();
+    alert (successMsg);
+  };
+};
 
-// const borrarTodoProdBtn = () =>{
-//   confirmarVaciarCarrito("¿Desea borrar todos los productos?");
-// };
+const borrarTodoProdBtn = () =>{
+  confirmarVaciarCarrito("¿Desea borrar todos los productos?", "Los productos se han borrado");
+};
+
+const realizarCompraProdBtn = () =>{
+  confirmarVaciarCarrito("¿Desea realizar la comprar de los productos?", "La compra se ha realizado con exito, muchas gracias");
+};
 
 
 //---------------------------
@@ -383,9 +388,10 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", showTotal);
     products.addEventListener("click", agregarProd);
     prodContainer.addEventListener("click", controlDeQuantity);
+    borrarProd.addEventListener("click", borrarTodoProdBtn);
+    comprarProd.addEventListener("click", realizarCompraProdBtn);
     disBtn(comprarProd);
-    disBtn(borrarProd);
-    // borrarProd.addEventListener("click", borrarTodoProdBtn);
+    disBtn(borrarProd);    
 };
 
 init();
