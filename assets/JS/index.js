@@ -62,7 +62,7 @@ const renderProducts = (producto) => {
             </div>
 
             
-            <button class="product__container__card__info__bot--btnadd" data-id="${id}" data-name="${name}" data-img="${img}" data-precio="${bid}">Comprar</button>
+            <button class="product__container__card__info__bot--btnadd" data-id="${id}" data-name="${name}" data-img="${img}" data-bid="${bid}">Comprar</button>
             
 
         </div>
@@ -302,6 +302,71 @@ const crearProductoCarrito = (product) => {
 };
 
 
+const handlerMinusBtnEvent = (id) =>{
+  const existingCartProduct = cart.find ((item) =>{
+    return item.id === id;
+  });
+  
+  if (existingCartProduct.quantity === 1) {
+
+    if (window.confirm("¿Desea eliminar este producto")) {
+      eliminarProductoDelCarrito (existingProduct);
+    }
+    return;
+  }
+  
+  substractProductUnit(existingCartProduct);
+  
+};
+
+const handlerPlusBtnEvent = (id) =>{
+  const existingCartProduct = cart.find ((item) =>{
+    return item.id === id;
+  });
+
+  agregardUnidadAlCarrito(existingCartProduct);
+}
+
+const eliminarProductoDelCarrito = (existingProduct) =>{
+  cart = cart.filter ((product)=> product.id !== existingProduct.id);
+      checkCart();
+};
+
+const substractProductUnit = (existingProduct) => {
+  cart = cart.map ((product) =>{
+    return product.id === existingProduct.id ? {...product, quantity: Number(product.quantity) -1} :
+    product;
+  });
+};
+
+
+const controlDeQuantity = (e) =>{
+    if (e.target.classList.contains("resta")) {
+      handlerMinusBtnEvent (e.target.dataset.id);
+    } else if (e.target.classList.contains("suma")) {
+      handlerPlusBtnEvent(e.target.dataset.id);
+    }
+
+    checkCart();
+};
+
+
+// const vaciarCarrito = () =>{
+//   carrito = [];
+//   checkCart;
+// };
+
+// const confirmarVaciarCarrito = (confirmMsg) =>{
+//   if (!carrito.length) return;
+//   if (window.confirm(confirmMsg)) {
+//     vaciarCarrito;
+//   };
+// };
+
+// const borrarTodoProdBtn = () =>{
+//   confirmarVaciarCarrito("¿Desea borrar todos los productos?");
+// };
+
 
 //---------------------------
 
@@ -317,8 +382,10 @@ const init = () => {
     document.addEventListener("DOMContentLoaded", renderCarrito);
     document.addEventListener("DOMContentLoaded", showTotal);
     products.addEventListener("click", agregarProd);
+    prodContainer.addEventListener("click", controlDeQuantity);
     disBtn(comprarProd);
     disBtn(borrarProd);
+    // borrarProd.addEventListener("click", borrarTodoProdBtn);
 };
 
 init();

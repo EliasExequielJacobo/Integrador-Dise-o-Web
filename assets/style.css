@@ -226,18 +226,18 @@ body {
 
 .resta {
   background: var(--thirdtext);
-  border: 1px solid #000000;
+  border: 1px solid white;
   cursor: pointer;
   font-size: 10px;
-  color: var(--background);
+  color: white;
 }
 
 .suma {
   background: var(--thirdtext);
-  border: 1px solid #000000;
+  border: 1px solid white;
   cursor: pointer;
   font-size: 10px;
-  color: var(--background);
+  color: white;
 }
 
 .dividerLine {
