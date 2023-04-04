@@ -235,9 +235,32 @@
     
 
     /* REGISTER */
+
+    /* categories  */
+
+    .category {
+        width: 70px;
+        height: 40px;
+        font-size: x-small;
+    }
+
+    /* categories  */
+
+    /* carrito */
+
+    .carrito {
+        padding: 30px 34px;
+    }
+
+    /* carrito */
 }
 
 @media (max-width: 320px) {
+
+    .header {
+        gap: 15px;
+    }
+
     .benefit__container {
         width: 90%;
     }
@@ -274,4 +297,12 @@
         font-size: 13px;
     }
     
+
+    .category {
+        width: 60px;
+        height: 40px;
+        font-size: x-small;
+    }
+
+    /* categories  */
 }

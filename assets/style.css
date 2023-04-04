@@ -161,8 +161,9 @@ body {
 }
 
 .msgVacio {
-    font-size: 10px;
+    font-size: 11px;
     color: white;
+    font-weight: 700;
 }
 
 .productCard {
@@ -178,14 +179,11 @@ body {
 }
 
 .productCard img {
-  width: 95%;
+  width: 90%;
   border-radius: 10px;
 }
 
 .productInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 95%;
   text-align: center;
 }
